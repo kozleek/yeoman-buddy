@@ -42,8 +42,6 @@ module.exports = yeoman.Base.extend({
     ];
 
     return this.prompt(prompts).then(function (props) {
-      // To access props later use this.props.someAnswer;
-
       this.site_name = props.site_name;
       this.site_author = props.site_author;
       this.site_bootstrap = props.site_bootstrap
@@ -53,8 +51,7 @@ module.exports = yeoman.Base.extend({
     }.bind(this));
   },
 
-  writing: function () {
-
+  configuring: function () {
     this.directory('resources', 'resources');
     this.directory('assets', 'assets');
 
@@ -65,6 +62,13 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function () {
-    this.installDependencies();
+    //this.installDependencies();
+  },
+
+  end: function(){
+    this.spawnCommandSync('git', ['init']);
+    this.spawnCommandSync('git', ['add', '--all']);
+    this.spawnCommandSync('git', ['commit', '-m', 'Init']);
   }
+
 });
