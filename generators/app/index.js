@@ -11,7 +11,7 @@ module.exports = yeoman.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the splendid ' + chalk.red('generator-buddy') + ' generator!'
+      chalk.red('Nový projekt!')
     ));
 
     var prompts = [
@@ -26,12 +26,6 @@ module.exports = yeoman.Base.extend({
             name: 'site_author',
             message: 'Autor:',
             default: 'Tomas -kozleek- Musiol (tomas.musiol@gmail.com)'
-        },
-        {
-            type: "confirm",
-            name: 'site_jquery',
-            message: 'CDN jQuery?',
-            default: true
         },
         {
             type: "confirm",
@@ -52,7 +46,6 @@ module.exports = yeoman.Base.extend({
 
       this.site_name = props.site_name;
       this.site_author = props.site_author;
-      this.site_jquery = props.site_jquery;
       this.site_bootstrap = props.site_bootstrap
       this.site_google_analytics = props.site_google_analytics;
 
