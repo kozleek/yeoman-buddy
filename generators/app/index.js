@@ -59,6 +59,7 @@ module.exports = yeoman.Base.extend({
     this.template('package.json', 'package.json');
     this.template('bower.json', 'bower.json');
     this.template('gruntfile.js', 'gruntfile.js');
+    this.template('README.md', 'README.md');
   },
 
   install: function () {
