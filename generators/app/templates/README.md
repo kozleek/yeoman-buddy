@@ -1,6 +1,6 @@
 ## Projekt: <%= site_name %>
 
-Název projektu: <%= site_name %>
+<%= site_description %>
 
 Autor projektu: <%= site_author %>
 

@@ -6,8 +6,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="code: <%= site_author %>">
-        <meta name="description" content="">
-
+        <meta name="description" content="<%= site_description %>">
         <% if( site_bootstrap ){ %><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><% } %>
         <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -28,22 +27,9 @@
             <h1>Projekt: <%= site_name %></h1>
             <p>&nbsp;</p>
             <table class="table table-striped">
-                <tr>
-                    <th>Název projektu</th>
-                    <td><%= site_name %></td>
-                </tr>
-                <tr>
-                    <th>Autor projektu</th>
-                    <td><%= site_author %></td>
-                </tr>
-                <tr>
-                    <th>Bootstrap?</th>
-                    <td><%= site_bootstrap %></td>
-                </tr>
-                <tr>
-                    <th>Google Analytics UID</th>
-                    <td><%= site_google_analytics %></td>
-                </tr>
+                <% if( site_author ){ %><tr><th>Autor projektu</th><td><%= site_author %></td></tr><% } %>
+                <% if( site_bootstrap ){ %><tr><th>Bootstrap?</th><td>Ano</td></tr><% } %>
+                <% if( site_google_analytics ){ %><tr><th>Google Analytics UID</th><td><%= site_google_analytics %></td></tr><% } %>
             </table>
         </div>
     </div>  <!-- /container -->

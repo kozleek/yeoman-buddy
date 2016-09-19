@@ -18,8 +18,13 @@ module.exports = yeoman.Base.extend({
         {
             type: "input",
             name: 'site_name',
-            message: 'Název webu / aplikace:',
+            message: 'Název:',
             default: this.appname
+        },
+        {
+            type: "input",
+            name: 'site_description',
+            message: 'Krátký popisek:'
         },
         {
             type: "input",
@@ -43,6 +48,7 @@ module.exports = yeoman.Base.extend({
 
     return this.prompt(prompts).then(function (props) {
       this.site_name = props.site_name;
+      this.site_description = props.site_description;
       this.site_author = props.site_author;
       this.site_bootstrap = props.site_bootstrap
       this.site_google_analytics = props.site_google_analytics;
