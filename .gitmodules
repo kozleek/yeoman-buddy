@@ -1,0 +1,3 @@
+[submodule "generators/app/templates/wordpress"]
+	path = generators/app/templates/wordpress
+	url = https://github.com/WordPress/WordPress.git
