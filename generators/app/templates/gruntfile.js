@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         // pravidla pro automatickou kompilaci
         watch: {
             less: {
-                files: ["**/*.less", "gruntfile.js"],
+                files: ["**/**/*.less", "gruntfile.js"],
                 tasks: ["less"],
                 options: { atBegin: true }
             }
