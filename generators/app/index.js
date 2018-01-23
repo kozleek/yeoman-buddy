@@ -47,6 +47,9 @@ module.exports = yeoman.Base.extend({
     this.directory('resources', 'resources');
     this.directory('assets', 'assets');
 
+    this.template('_gitignore', '.gitignore');
+    this.template('_editorconfig', '.editorconfig');
+
     this.template('index.html', 'index.html');
     this.template('deployment.ini', 'deployment.ini');
     this.template('package.json', 'package.json');
@@ -55,7 +58,10 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function () {
-    this.installDependencies();
+    this.installDependencies({
+      npm: true,
+      bower: false
+    });
   },
 
   end: function(){

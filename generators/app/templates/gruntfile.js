@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     autoprefixer: {
       dist: {
         options: { browsers: ['> 4% in CZ'] },
-        files: { 'assets/styles/css/style.min.css': 'assets/styles/css/style.min.css' }
+        files: { 'assets/css/style.min.css': 'assets/css/style.min.css' }
       }
     },
 
