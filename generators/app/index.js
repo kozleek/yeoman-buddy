@@ -31,18 +31,6 @@ module.exports = yeoman.Base.extend({
             name: 'site_author',
             message: 'Autor:',
             default: 'Tomas -kozleek- Musiol (tomas.musiol@gmail.com)'
-        },
-        {
-            type: "confirm",
-            name: 'site_bootstrap',
-            message: 'CDN Bootstrap?',
-            default: true
-        },
-        {
-            type: "input",
-            name: 'site_google_analytics',
-            message: 'Google Analytics:',
-            default: 'UA-XXXXXX'
         }
     ];
 
@@ -50,8 +38,6 @@ module.exports = yeoman.Base.extend({
       this.site_name = props.site_name;
       this.site_description = props.site_description;
       this.site_author = props.site_author;
-      this.site_bootstrap = props.site_bootstrap
-      this.site_google_analytics = props.site_google_analytics;
 
       cb();
     }.bind(this));
@@ -62,8 +48,8 @@ module.exports = yeoman.Base.extend({
     this.directory('assets', 'assets');
 
     this.template('index.html', 'index.html');
+    this.template('deployment.ini', 'deployment.ini');
     this.template('package.json', 'package.json');
-    this.template('bower.json', 'bower.json');
     this.template('gruntfile.js', 'gruntfile.js');
     this.template('README.md', 'README.md');
   },
