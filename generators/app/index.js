@@ -65,9 +65,11 @@ module.exports = yeoman.Base.extend({
   },
 
   end: function(){
+    this.spawnCommandSync('grunt', ['makecss']);
     this.spawnCommandSync('git', ['init']);
     this.spawnCommandSync('git', ['add', '--all']);
     this.spawnCommandSync('git', ['commit', '-m', 'Init']);
+    this.spawnCommandSync('grunt');
   }
 
 });
