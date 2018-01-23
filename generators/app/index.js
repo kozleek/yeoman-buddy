@@ -30,7 +30,7 @@ module.exports = yeoman.Base.extend({
             type: "input",
             name: 'site_author',
             message: 'Autor:',
-            default: 'Tomas -kozleek- Musiol (tomas.musiol@gmail.com)'
+            default: 'code: Tomas -kozleek- Musiol (tomas.musiol@gmail.com)'
         }
     ];
 
